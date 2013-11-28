@@ -3,6 +3,8 @@
             [taoensso.carmine :as car :refer (wcar)]
             [scribe.redis :as redis]))
 
+(use '[clojure.string :only (join trim)])
+
 (defn- new-uuid []
   (.toString (java.util.UUID/randomUUID)))
 
@@ -34,9 +36,18 @@
 
 (defn as-json [uuid]
   (if (redis/exists (scribe-key uuid))
-    {:uuid uuid
-     :_links [{:self {:href (format "/logs/%s" uuid)}}
-              {:messages {:href (format "/logs/%s/messages" uuid)}}]}
-    {}))
+    (json/write-str {:uuid uuid 
+                     :_links [{:self {:href (format "/logs/%s" uuid)}} 
+                              {:messages {:href (format "/logs/%s/messages" uuid)}}]})
+    (json/write-str {})))
 
+(defn as-text [uuid]
+  (if (redis/exists (scribe-key uuid))
+    (trim (join "\n" (messages uuid)))
+    ""))
+
+(defn as [format uuid]
+  (case format
+    "application/json" (as-json uuid)
+    "text/plain" (as-text uuid)))
 

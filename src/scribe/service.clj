@@ -18,10 +18,11 @@
 
 (defn logs-show [request]
   (let [uuid (-> request :path-params :id)
+        format (-> request :headers :accept)
         response (if (scribe.log/exists uuid) 
-                     (scribe.log/as-json uuid)
+                     (scribe.log/as format uuid)
                      {:error "Log does not exist"})]
-    (ring-resp/response (json/write-str response))))
+    (ring-resp/response response)))
 
 (defn logs-create [request]
   (let [uuid (scribe.log/build)
