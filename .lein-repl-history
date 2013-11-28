@@ -1,0 +1,176 @@
+(java.util.uuid/generateUUID)
+(str java.util.uuid/generateUUID)
+(let [uuid (str java.util.uuid/generateUUID)])
+(:require java.util.uuid)
+java.util
+(str "asd")
+(str java.util.UUID/randomUUID)
+(str (java.util.UUID/randomUUID))
+(defmacro wcar* [& body]
+`(car/wcar {:pool {} :spec {}} ~@body))
+(wcar* (car/keys))
+(:require [taoensso.carmine :as car :refer (wcar)]))
+(:require [taoensso.carmine :as car :refer (wcar)])
+wcar
+(ns main
+(:require [taoensso.carmine :as car :refer (wcar)]))
+car
+(defmacro wcar* [& body]
+  `(car/wcar {:pool {} :spec {}} ~@body))
+(wcar* (car/keys))
+(console/log (wcar* (car/keys)))
+(println (wcar* (car/keys)))
+(println (wcar* (car/keys "*")))
+(str (java.util.UUID/randomUUID))
+(let [uuid (str (java.util.UUID/randomUUID))])
+(println uuid)
+(let [uuid (str (java.util.UUID/randomUUID))])
+(let [uuid (str (java.util.UUID/randomUUID))]
+  (println uuid))
+(let [uuid (str (java.util.UUID/randomUUID))]
+  (json/write-str {:uuid uuid}))
+(ns main (:require [clojure.data.json :as json]))
+(let [uuid (str (java.util.UUID/randomUUID))]
+  (json/write-str {:uuid uuid}))
+(defn create-log []
+  (let [uuid (str (java.util.UUID/randomUUID))]
+    (wcar* (car/append uuid ""))
+    (println uuid)))
+(str create-log)
+(defn create-log []
+  (let [uuid (str (java.util.UUID/randomUUID))]
+    (wcar* (car/append (str uuid) ""))
+    (println (str uuid))))
+(str create-log)
+(defn create-logs []
+  (let [uuid (str (java.util.UUID/randomUUID))]
+    (wcar* (car/append (str uuid) ""))
+    (println (str uuid))))
+(str create-logs)
+(create-logs)
+(scribe.service/create-log)
+(scribe.service/create-log ['a])
+(scribe.service uuid-gen)
+(scribe.service/uuid-gen)
+(str scribe.service/uuid-gen)
+(scribe.service/uuid-gen toString)
+(scribe.service/uuid-gen str)
+(toString scribe.service/uuid-gen)
+str scribe.service/uuid-gen)
+(str scribe.service/uuid-gen)
+(json/generate-str scribe.service/uuid-gen)
+(ns main
+(:require [clojure.core.json :as json]))
+(ns main
+(:require [clojure.data.json :as json]))
+(json/generate-str scribe.service/uuid-gen)
+(java.util.UUID/randomUUID)
+(hashCode (java.util.UUID/randomUUID))
+(java.util.UUID/randomUUID)
+(doto (java.util.UUID/randomUUID) (.toString))
+(.toString (java.util.UUID/randomUUID))
+(scribe.service/create-log ['a])
+(ns main
+(:require [clojure.data.json :as json]))
+(ns main
+  (:require [taoensso.carmine :as car :refer (wcar)]))
+(def redis-conn {:pool {} :spec {}})
+(defmacro wcar* [& body]
+  `(car/wcar redis-conn ~@body))
+(scribe.service/uuid-gen)
+(json/write-str (scribe.service/uuid-gen))
+(json/write-str {:uuid (scribe.service/uuid-gen)})
+(wcar car/append (scribe.service/uuid-gen) "")
+(wcar* car/append (scribe.service/uuid-gen) "")
+(wcar* (car/append (scribe.service/uuid-gen) ""))
+(wcar* (car/keys "*"))
+(wcar* (car/append (scribe.service/uuid-gen) ""))
+(scribe.service/generate-log)
+(scribe.service/create-log ['a])
+(scribe.service/uuid-str)
+(.toString scribe.service/uuid-str)
+(.toString (scribe.service/uuid-str))
+(defn uuid-str []
+  (.toString (java.util.UUID/randomUUID)))
+(println uuid-str)
+(println (uuid-str))
+(scribe.service/uuid-str)
+(scribe.service/create-log)
+(scribe.service/create-log ['a])
+(require 'scribe.redis :as 'redis)
+keys
+(keys)
+(keys "*")
+redis
+(redis/keys "*")
+(require [scribe.redis :as redis])
+(:require [scribe.redis :as redis])
+(ns main
+  (:require '[scribe.redis :as redis]))
+(ns main
+  (:require ['scribe.redis :as 'redis]))
+(ns main
+  (:require [scribe.redis :as redis]))
+redis
+ns
+(ns)
+(println ns)
+(ns user)
+(ns user (:require [scribe.redis :as redis]))
+redis
+(redis)
+(redis/keys "*")
+(:require [scribe.redis :as redis])
+(ns user
+  (:require [scribe.redis :as redis]))
+(redis/keys "*")
+(ns user
+  (:require [scribe.resources.log :as log]))
+(log/all)
+(let [uuid (log/build)])
+uuid
+(uuid)
+(println uuid)
+(let [uuid (log/build)]
+  (println uuid))
+(log/all)
+(scribe.resources.log/find "scribe:93fb06eb-af1e-4b11-8d0c-f29c1fa3f538")
+(scribe.resources.log/lpush "scribe:93fb06eb-af1e-4b11-8d0c-f29c1fa3f538" "Hello")
+(scribe.resources.log/append-message "scribe:93fb06eb-af1e-4b11-8d0c-f29c1fa3f538" "Hello")
+(scribe.resources.log/find "scribe:93fb06eb-af1e-4b11-8d0c-f29c1fa3f538")
+(scribe.resources.log/lrange "scribe:93fb06eb-af1e-4b11-8d0c-f29c1fa3f538")
+(scribe.redis/wcar)
+(ns user
+  (:require [scribe.redis :as redis]
+            [scribe.resources.log :as log]))
+(log/find "scribe:93fb06eb-af1e-4b11-8d0c-f29c1fa3f538")
+(let [uuid (log/build)]
+  (println uuid))
+(log/find "07864abf-b5c1-4871-8d40-6dd651bd0b64")
+(redis/type "07864abf-b5c1-4871-8d40-6dd651bd0b64")
+(redis/type "scribe:07864abf-b5c1-4871-8d40-6dd651bd0b64")
+(redis/lrange "scribe:07864abf-b5c1-4871-8d40-6dd651bd0b64")
+(redis/lrange "scribe:07864abf-b5c1-4871-8d40-6dd651bd0b64" 0 0)
+(redis/lrange "scribe:07864abf-b5c1-4871-8d40-6dd651bd0b64")
+(scribe.resources.log/to-json "93fb06eb-af1e-4b11-8d0c-f29c1fa3f538")
+(log/messages "b69b7f79-c98a-4218-9f7f-e2858839c9d8")
+(scribe.resources.log/messages "b69b7f79-c98a-4218-9f7f-e2858839c9d8")
+InputStream
+(let [foo (if (= nil 1)
+              (+ 1 2)
+              (+ 1 0))]
+  (println foo))
+(scribe.log/exists "asdasdas")
+(bool (scribe.log/exists "asdasdas"))
+(scribe.log/exists "scribe:ef40d26c-952d-4008-9520-1ef71d5f10c0")
+(scribe.redis/exists "scribe:ef40d26c-952d-4008-9520-1ef71d5f10c0")
+(reload)
+(= (scribe.redis/exists "scribe:ef40d26c-952d-4008-9520-1ef71d5f10c0") 1)
+(scribe.log/exists "asdasdas")
+(scribe.log/exists "scribe:ef40d26c-952d-4008-9520-1ef71d5f10c0")
+(scribe.redis/exists "scribe:ef40d26c-952d-4008-9520-1ef71d5f10c0")
+(= 1 (scribe.redis/exists "scribe:ef40d26c-952d-4008-9520-1ef71d5f10c0"))
+(scribe.log/exists "scribe:ef40d26c-952d-4008-9520-1ef71d5f10c0")
+(scribe.log/scribe-key "scribe:ef40d26c-952d-4008-9520-1ef71d5f10c0")
+(format "scribe:%s" "scribe:ef40d26c-952d-4008-9520-1ef71d5f10c0")
+(scribe.log/exists "ef40d26c-952d-4008-9520-1ef71d5f10c0")
